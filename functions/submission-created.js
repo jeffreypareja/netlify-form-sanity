@@ -6,7 +6,7 @@ const client = sanityClient({
 
 exports.handler = async function (event, context, callback) {
   const { payload } = JSON.parse(event.body)
-  const result = await client.create({ _type: 'submission.form', ...payload })
+  const result = await client.create({ _type: 'person', ...payload })
   callback(null, {
     statusCode: 200
   }) 
